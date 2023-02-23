@@ -11,9 +11,19 @@ patch:
         description: 'Test scenario tags'  
 
 permissions:
-  checks: write
   actions: write
-  contents: read
+  checks: write
+  contents: write
+  deployments: write
+  id-token: write
+  issues: write
+  discussions: write
+  packages: write
+  pages: write
+  pull-requests: write
+  repository-projects: write
+  security-events: write
+  statuses: write
 
 jobs:
   printInputs:
