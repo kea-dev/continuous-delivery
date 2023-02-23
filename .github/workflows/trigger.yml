@@ -1,5 +1,5 @@
 on: 
-  workflow_dis
+  workflow_dispatch:
 patch:
     inputs:
       logLevel:
