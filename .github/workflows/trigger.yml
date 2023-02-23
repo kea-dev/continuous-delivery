@@ -1,6 +1,9 @@
 on: 
   workflow_dispatch:
 
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+
 patch:
     inputs:
       logLevel:
@@ -31,4 +34,6 @@ jobs:
     steps:
     - run: |
         echo "Log level: ${{ github.event.inputs.logLevel }}"
-        echo "Tags: ${{ github.event.inputs.tags }}" 
+        echo "Tags: ${{ github.event.inputs.tags }}"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
