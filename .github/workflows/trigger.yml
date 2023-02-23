@@ -1,9 +1,6 @@
 on: 
   workflow_dispatch:
 
-env:
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
-
 patch:
     inputs:
       logLevel:
@@ -13,27 +10,16 @@ patch:
       tags:
         description: 'Test scenario tags'  
 
-permissions:
-  actions: write
-  checks: write
-  contents: write
-  deployments: write
-  id-token: write
-  issues: write
-  discussions: write
-  packages: write
-  pages: write
-  pull-requests: write
-  repository-projects: write
-  security-events: write
-  statuses: write
+permissions: write-all
 
 jobs:
   printInputs:
+    permissions: write-all
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
     runs-on: ubuntu-latest
     steps:
     - run: |
         echo "Log level: ${{ github.event.inputs.logLevel }}"
         echo "Tags: ${{ github.event.inputs.tags }}"
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+      
