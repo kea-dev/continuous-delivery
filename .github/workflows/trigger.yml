@@ -1,5 +1,6 @@
 on: 
   workflow_dispatch:
+
 patch:
     inputs:
       logLevel:
@@ -9,10 +10,13 @@ patch:
       tags:
         description: 'Test scenario tags'  
 
-jobs:
+permissions:
+  checks: write
+  actions: write
+  contents: read
 
+jobs:
   printInputs:
-    permissions: write-all
     runs-on: ubuntu-latest
     steps:
     - run: |
