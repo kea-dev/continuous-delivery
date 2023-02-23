@@ -9,10 +9,9 @@ patch:
       tags:
         description: 'Test scenario tags'  
 
-permissions: write-all
-
 jobs:
   printInputs:
+  permissions: write-all
     runs-on: ubuntu-latest
     steps:
     - run: |
