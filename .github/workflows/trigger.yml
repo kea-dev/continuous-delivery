@@ -8,8 +8,7 @@ on:
       tags:
         description: 'Test scenario tags'  
 
-permissions: 
-  id-token: write
+permissions: write-all
 
 jobs:
   printInputs:
