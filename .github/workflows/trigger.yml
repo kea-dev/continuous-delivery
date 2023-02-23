@@ -8,10 +8,7 @@ on:
       tags:
         description: 'Test scenario tags'  
 
-permissions:
-  checks: write
-  actions: write
-  contents: write
+permissions: write-all
 
 jobs:
   printInputs:
