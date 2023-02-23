@@ -7,6 +7,12 @@ on:
         default: 'warning'
       tags:
         description: 'Test scenario tags'  
+
+permissions:
+  checks: write
+  actions: write
+  contents: read
+
 jobs:
   printInputs:
     runs-on: ubuntu-latest
