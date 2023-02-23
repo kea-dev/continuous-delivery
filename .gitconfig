@@ -6,8 +6,7 @@
 	cm = commit -m
 	st = status
 	addremove = add -A
-	acp = "!f() { git add -A; git commit -m \"$1\"; git push }; f"
-	acp2 = "!f(){ git add -A; git commit -m \"$1\"; git push; }; f"
+	acp = "!f(){ git add -A; git commit -m \"$1\"; git push; }; f"
 
 [push]
 	default = current
