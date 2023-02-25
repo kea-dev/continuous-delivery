@@ -1,12 +1,16 @@
+# to install use: 
 # git config --local include.path ../.gitconfig
 [alias]
 	root = rev-parse --show-toplevel
 	tree = log --graph --all --oneline
 	co = checkout
-	cm = commit -m
+	cm = commit -m  
+	  # usage: cm "message"
 	st = status
 	addremove = add -A
-	acp = "!f(){ git add -A; git commit -m \"$1\"; git push; }; f"
+	acp = "!f(){ git add -A && git commit -m \"$1\" && git push; }; f"  
+	  #acp = add+comit+push
+	  # usage: acp "message"
 
 [push]
 	default = current

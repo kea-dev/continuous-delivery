@@ -1,3 +1,4 @@
 [template]
-	repo = kea-dev/social-coding
+	repo = kea-classrooms/tmp-ci
 	issue-label = template
+	
