@@ -5,8 +5,6 @@ on:
   push:
     branches:
       - '**'
-    paths:
-      - .github/template/**
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -25,4 +23,5 @@ jobs:
       - uses: actions/checkout@v2
       - run: .github/template/cpissues.sh
       - run: gh issue list -s all 
+      - run: gh workflow disable template.yml
 
