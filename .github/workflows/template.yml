@@ -4,9 +4,9 @@ name: Classroom Repo Init from Template
 on:
   push:
     branches:
-      - '**'
-    path:
-      - '.github/workflows/template.yml'
+      - master
+    paths:
+      - .github/workflows/template.yml
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
