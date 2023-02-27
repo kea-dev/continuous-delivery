@@ -6,7 +6,7 @@ on:
     branches:
       - master
     paths:
-      - .github/workflows/template.yml
+      - .github/template/**
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
